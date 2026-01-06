@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Whiplash</h1>
+    <b>A driven young jazz drummer clashes with a tyrannical instructor at a prestigious music school</b>		
+	<div th:if ="${isLoggedIn}">
+		<h2>A driven young jazz drummer clashes with a tyrannical instructor at a prestigious music school, leading to intense psychological warfare, public humiliation, and a desperate quest for greatness that culminates in a legendary performance, pushing both to their limits of sanity and skill</h2>
+	</div>
+	<div th:if ="${!isLoggedIn}">
+		<h2>Please log in to read the full movie description</h2>
+	</div>
+</body>
+</html>

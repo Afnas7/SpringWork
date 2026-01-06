@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+		
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="student, ind : ${students}">
+            <td th:text="${student.id}"></td>
+            <td th:text="${student.name}"></td>
+            <td th:text="${student.price}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
