@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2>Add Phone</h2>
+
+<form action="/savephone" method="post" th:object="${phone}">
+    Name: <input type="text" th:field="*{name}"><br>
+    Description: <input type="text" th:field="*{description}"><br>
+    Price: <input type="number" th:field="*{price}"><br>
+    <button type="submit">Save</button>
+</form>
+
+<a href="/phone">Back</a>
+</body>
+</html>

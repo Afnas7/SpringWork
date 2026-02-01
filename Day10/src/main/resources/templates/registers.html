@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Job Seeker Registration</title>
+</head>
+<body>
+
+<h2>Job Seeker Registration</h2>
+
+<form th:action="@{/register}" th:object="${jobSeeker}" method="post">
+
+    Full Name: <input type="text" th:field="*{fullName}" required><br><br>
+
+    Mobile Number: <input type="text" th:field="*{mobile}" required><br><br>
+
+    Email: <input type="email" th:field="*{email}" required><br><br>
+
+    Password: <input type="password" th:field="*{password}" required><br><br>
+
+    <button type="submit">Register</button>
+
+</form>
+
+</body>
+</html>

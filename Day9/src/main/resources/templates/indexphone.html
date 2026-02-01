@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<h2>Phone List</h2>
+
+<form method="get" action="/phone">
+    <input type="text" name="keyword" placeholder="Search by name" th:value="${keyword}">
+    <button type="submit">Search</button>
+</form>
+
+<a href="/addphone">Add Phone</a>
+
+<table border="1">
+    <tr>
+        <th>Name</th><th>Description</th><th>Price</th><th>Actions</th>
+    </tr>
+    <tr th:each="s : ${phones}">
+        <td th:text="${s.name}"></td>
+        <td th:text="${s.description}"></td>
+        <td th:text="${s.price}"></td>
+        <td>
+            <a th:href="@{/editphone/{id}(id=${s.id})}">Edit</a>
+            <a th:href="@{/deletephone/{id}(id=${s.id})}">Delete</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
